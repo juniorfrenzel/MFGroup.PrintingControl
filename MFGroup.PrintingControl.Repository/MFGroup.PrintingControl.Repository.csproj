@@ -46,6 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IMaterialRepository.cs" />
+    <Compile Include="Migrations\201307151955254_PrimeiraMigration.cs" />
+    <Compile Include="Migrations\201307151955254_PrimeiraMigration.Designer.cs">
+      <DependentUpon>201307151955254_PrimeiraMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PrintingControlContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -58,7 +64,11 @@
       <Name>MFGroup.PrintingControl.Entity</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201307151955254_PrimeiraMigration.resx">
+      <DependentUpon>201307151955254_PrimeiraMigration.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
